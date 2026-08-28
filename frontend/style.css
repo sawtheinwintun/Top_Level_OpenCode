@@ -1,0 +1,103 @@
+:root {
+  --ink: #1c1524;
+  --paper: #f4ead8;
+  --card: #fff8ee;
+  --marigold: #e39b12;
+  --plum: #6b3f7a;
+  --line: rgba(28, 21, 36, 0.12);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: Outfit, Padauk, system-ui, sans-serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(227, 155, 18, 0.16), transparent 32%),
+    radial-gradient(circle at 88% 0%, rgba(107, 63, 122, 0.12), transparent 28%),
+    linear-gradient(180deg, #f7eedf 0%, #efe2cc 100%);
+}
+
+body.lang-my {
+  font-family: Padauk, Outfit, system-ui, sans-serif;
+  line-height: 1.7;
+}
+
+.display {
+  font-family: Fraunces, Padauk, serif;
+  font-optical-sizing: auto;
+}
+
+.paper-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 40px rgba(28, 21, 36, 0.08);
+}
+
+.dashed-drop {
+  border: 2px dashed rgba(107, 63, 122, 0.35);
+  background: repeating-linear-gradient(
+    -12deg,
+    transparent,
+    transparent 10px,
+    rgba(227, 155, 18, 0.05) 10px,
+    rgba(227, 155, 18, 0.05) 11px
+  );
+}
+
+.ink-btn {
+  background: var(--ink);
+  color: #fff8ee;
+}
+
+.ink-btn:hover {
+  background: #2b2236;
+}
+
+.gold-btn {
+  background: var(--marigold);
+  color: var(--ink);
+}
+
+.gold-btn:hover {
+  filter: brightness(0.96);
+}
+
+.lang-pill[aria-pressed="true"] {
+  background: var(--ink);
+  color: #fff8ee;
+}
+
+.toast {
+  animation: rise 0.25s ease-out;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(255, 248, 238, 0.3);
+  border-top-color: #fff8ee;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
